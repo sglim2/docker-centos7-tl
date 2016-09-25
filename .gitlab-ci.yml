@@ -27,7 +27,7 @@ build_app:
 deploy_app:
   type: deploy
   script:
-   - docker push bigr.bios.cf.ac.uk:4567/sacim/mantlevis-all-in-one
+   - docker push bigr.bios.cf.ac.uk:4567/sacim/centos7-tl
    - git clone git@bigr:sacim/centos7-tl && cd centos7-tl && git push -f git@github.com:sglim2/docker-centos7-tl master && cd .. && rm -rf centos7-tl
 
 
