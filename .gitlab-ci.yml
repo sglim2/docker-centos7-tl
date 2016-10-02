@@ -20,11 +20,17 @@ types:
   - deploy
 
 build_app:
+  only:
+   - master
+   - trigger
   type: build
   script: 
    - make build
 
 deploy_app:
+  only:
+   - master
+   - trigger
   type: deploy
   script:
    - docker push bigr.bios.cf.ac.uk:4567/sacim/centos7-tl
